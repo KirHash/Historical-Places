@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places of the World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image.png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image.png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+  </head>
+
+  <body>
+
+    <header>
+      <a href="#" class="brand">Trip.Labs</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Home</a>
+          <a href="https://youtu.be/MorjCQf-YoA">Explore</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="myhome">
+      
+      
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,dpr_1.0,f_auto,fl_progressive.strip_profile,g_center,h_460,q_auto,w_768/v1/filestore/u89sv8ohc0gaa958yh1zh8vuue4l_1619595084_shutterstock_275490581.jpg" alt="The Great Wall Of China" width="100%">
+          </div>
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,dpr_1.0,f_auto,fl_progressive.strip_profile,g_center,h_460,q_auto,w_768/v1/filestore/4q5tejgfrgal67d9s1rm66myvq3e_1619595246_shutterstock_721311280.jpg" alt="Forbidden City" width="100%">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,dpr_1.0,f_auto,fl_progressive.strip_profile,g_center,h_460,q_auto,w_768/v1/filestore/wppmyaubdv3vx2r20cgk5jbc5gnb_1619596609_shutterstock_366534830.jpg" alt="Imperial Palace" width="100%">
+          </div>
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://images.thrillophilia.com/image/upload/s--e8EGGopN--/c_fill,g_center,h_460,q_auto,w_768/dpr_1.0,f_auto,fl_strip_profile/v1/images/photos/000/371/273/original/1618042871_terracotta-army-1864972_1920.jpg.jpg" alt="The Terracotta Army, Xi'an" width="100%">
+          </div>
+        </div>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+        
+      
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

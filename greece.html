@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places of the World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image.png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image.png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+  </head>
+
+  <body>
+
+    <header>
+      <a href="#" class="brand">Trip.Labs</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Home</a>
+          <a href="https://youtu.be/MorjCQf-YoA">Explore</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="myhome">
+      
+      
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://images.thrillophilia.com/image/upload/s--NWZR66J3--/c_fill,g_auto,h_460,w_768/dpr_1.0/v1/attractions/images/000/006/294/original/1598614888_The_Temple_of_Olympian_Zeus1.jpg.jpg" alt="Temple of Olympian Zeus" width="100%">
+          </div>
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://images.thrillophilia.com/image/upload/s--Cc5_yylk--/c_fill,g_auto,h_460,w_768/dpr_1.0/v1/attractions/images/000/006/292/original/1598614656_Parthenon.jpg.jpg" alt="Parthenon" width="100%">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://images.thrillophilia.com/image/upload/s--6o2CJzP_--/c_fill,g_center,h_460,q_auto,w_768/dpr_1.0,f_auto,fl_strip_profile/v1/images/photos/000/376/145/original/1637582465_The_Palace_of_Knossos.jpg.jpg" alt="The Palace of Knossos" width="100%">
+          </div>
+          <div class="col-lg col-sm-12 col-md-6 bg-light text-light p-4 m-3 fs-3 rounded">
+            <img src="https://images.thrillophilia.com/image/upload/s--DSr5RAK7--/c_fill,g_center,h_460,q_auto,w_768/dpr_1.0,f_auto,fl_strip_profile/v1/images/photos/000/376/151/original/1637583088_Sanctuary_of_Delphi.jpg.jpg" alt="Sanctuary of Delphi" width="100%">
+          </div>
+        </div>
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+        
+      
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

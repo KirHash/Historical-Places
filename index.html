@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places of the World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/469038a7c2.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image.png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image.png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Trip.Labs</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#myhome">Home</a>
+          <a href="https://youtu.be/MorjCQf-YoA">Explore</a>
+          <a href="#footer">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="myhome">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Historical<br><span>Places of the world.</span></h1>
+        <p>Soaked in hundreds of years worth of stories, the rich culture and traditions and of course, beliefs, are some of the best historical places scattered all over the world, which have attracted people from far and wide.</p>
+        <p>More than 2,000 years ago, travelers would write about incredible sights they had seen on their journeys. Over time, seven of those places made history as the "wonders of the ancient world." Check them out here.</p>
+        <a href="read-me.html">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Camping.<br><span>Enjoy</span></h1>
+        <p>Camping can be a nourishing, bonding experience with your friends, family, Mother Nature, or all three. In 2018, 41.67 million happy campers packed up their stuff and headed into the wilderness for a day or 2.</p>
+
+        <p>However, it can just as easily turn into a nightmare involving portable-stove-nuked sausages, collapsing tents, and invading bears from which you can’t really wake up. Luckily there are many steps you can take to nail camping (or tent peg it?) ahead of time and grab yourself a wholesome, outdoor experience.</p>
+      </div>
+      <div class="content">
+        <h1>Road Trip.<br><span>Together</span></h1>
+        <p>Road trips are not just about meeting new people, discovering unexplored regions, experiencing unique cultures or sampling bizarre cuisines. On these journeys, you will meet yourself.</p>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <footer class="footer-section" id="footer">
+      <div>
+        <a class="social-icon fa-brands fa-twitter"></a>
+      <a class="social-icon fa-brands fa-facebook"></a>
+      <a class="social-icon fa-brands fa-instagram"></a>
+      <a class="social-icon fa-solid fa-envelope"></a>
+      <p>© Copyright Trip.Labs</p>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
